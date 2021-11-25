@@ -24,6 +24,13 @@ export class LoginComponent implements OnInit {
   errorMsj:any = '';
 
   ngOnInit(): void {
+    this.reviewToken();
+  }
+
+  reviewToken(){
+    if (localStorage.getItem('token')) {
+      this.router.navigate(['products'])
+    }
   }
 
   onLogin(form: LoginI){

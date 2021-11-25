@@ -1,24 +1,30 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { AppRoutingModule, routingComponents } from './app-routing.module';
+import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 
-import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { AppRoutingModule, routingComponents } from './app-routing.module';
+import { BannerComponent } from './templates/banner/banner.component';
+import { ProductsComponent } from './components/products/products.component';
 // import { LoginComponent } from './components/login/login.component';
-// import { ProductsComponent } from './components/products/products.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    routingComponents
+    BannerComponent,
+    routingComponents,
+    ProductsComponent
     // LoginComponent,
     // ProductsComponent
   ],
   imports: [
     BrowserModule,
+    CommonModule,
     AppRoutingModule,
+    FormsModule,
     ReactiveFormsModule,
     HttpClientModule
   ],

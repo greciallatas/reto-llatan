@@ -1,1 +1,30 @@
-<p>products works!</p>
+<!-- <app-banner></app-banner> -->
+<div class="container-categories">
+    <span class="text-top">Top Categories</span>
+    <a class="all-categories" href="#">SEE ALL</a>
+</div>
+<div class="container-buttons">
+    <button type="button" class="btn btn-sm btn-category">
+        <i class="fas fa-tv"></i>
+    </button>
+    <button type="button" class="btn btn-sm btn-category">
+        <i class="fas fa-gem"></i>
+    </button>
+    <button type="button" class="btn btn-sm btn-category">
+        <img class="icon-clothes" src="../../../assets/women.png" alt="women's clothing">
+    </button>
+    <button type="button" class="btn btn-sm btn-category">
+        <img class="icon-clothes" src="../../../assets/men.png" alt="men's clothing">
+    </button>
+</div>
+<div class="row row-cols-2 row-cols-md-4 g-4" style="margin-inline: 1em;">
+    <div class="col" *ngFor="let item of products">
+        <div class="card card-product h-100">
+            <img src={{item.image}} class="card-img-top img-product" alt="product">
+            <div class="card-body card-body-product">
+                <h5 class="card-title card-title-product">{{item.title}}</h5>
+                <span class="card-text card-text-product">${{item.price}}</span>
+            </div>
+        </div>
+    </div>
+</div>
